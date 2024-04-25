@@ -1,0 +1,175 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Prototype TODOS",
+    "collectionId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+    "dateExported": "2024-04-25T04:36:58.045Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7b85b97e-126a-4908-9d67-ba6030764a44",
+            "colId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+            "containerId": "",
+            "name": "add-todo",
+            "url": "http://localhost:3000/api/add-todo",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-25T02:42:10.712Z",
+            "modified": "2024-04-25T03:06:26.351Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"todo\":\"membuat artikel\"\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test('test add todo', function() {  ",
+                            "  let data = tc.response.json;",
+                            "  expect(tc.response.status).to.equal(200);",
+                            "  expect(data.message).to.equal('saved');",
+                            "});"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "0aa17269-02de-4a5e-863f-fcc5e94af4c3",
+            "colId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+            "containerId": "",
+            "name": "update-todo-by-id",
+            "url": "http://localhost:3000/api/update-todo-by-id",
+            "method": "PUT",
+            "sortNum": 15000,
+            "created": "2024-04-25T04:32:03.832Z",
+            "modified": "2024-04-25T04:34:35.785Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\":1,\n  \"id\":2\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test('test add todo', function() {  ",
+                            "  let data = tc.response.json;",
+                            "  expect(tc.response.status).to.equal(200);",
+                            "  expect(data.message).to.equal('updated');",
+                            "});"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "44f9fd1f-d658-4b67-94e6-05ea30f4e0a2",
+            "colId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+            "containerId": "",
+            "name": "read-all-todos",
+            "url": "http://localhost:3000/api/read-all-todos?status=0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-25T03:10:33.153Z",
+            "modified": "2024-04-25T04:31:57.784Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "status",
+                    "value": "0",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"todo\":\"membuat artikel\"\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test('test add todo', function() {  ",
+                            "  let data = tc.response.json;",
+                            "  expect(tc.response.status).to.equal(200);",
+                            "  expect(data.message).to.equal('success');",
+                            "});"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "ffeca069-4f70-46cb-9778-ddc93d418148",
+            "colId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+            "containerId": "",
+            "name": "get-todo-by-id",
+            "url": "http://localhost:3000/api/get-todo-by-id?id=2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-25T04:28:29.597Z",
+            "modified": "2024-04-25T04:31:38.204Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"todo\":\"membuat artikel\"\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test('test add todo', function() {  ",
+                            "  let data = tc.response.json;",
+                            "  expect(tc.response.status).to.equal(200);",
+                            "  expect(data.message).to.equal('success');",
+                            "});"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "aea41c1e-8403-41ba-9d20-35309be66447",
+            "colId": "9e450b0c-dbcc-429b-a432-6da23fdd85d7",
+            "containerId": "",
+            "name": "delete-todo-by-id",
+            "url": "http://localhost:3000/api/delete-todo-by-id",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T04:34:21.027Z",
+            "modified": "2024-04-25T04:36:51.948Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":2\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "tc.test('test add todo', function() {  ",
+                            "  let data = tc.response.json;",
+                            "  expect(tc.response.status).to.equal(200);",
+                            "  expect(data.message).to.equal('deleted');",
+                            "});"
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "qLUSZXDDtd9VH40AV4eBEI6DDTOYAKFXVxXp0ADEml7UiPFAkGFdlQjmr3H751RO2qwXz1RPIhBPmc9AyiGVmQ"
+}
